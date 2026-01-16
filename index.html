@@ -9,6 +9,30 @@
 <meta name="keywords" content="Soccer Academy Centurion, Football Academy, Kids Soccer, Kings of Centurion">
 <meta name="author" content="Kings of Centurion FA">
 </head>
+    <script>
+  const images = document.querySelectorAll('.gallery img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'flex';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
 <body>
 <nav>
     <ul>
@@ -45,24 +69,31 @@
     </div>
 </section>
 
-<section>
+    <section>
   <h2>OUR MOMENTS</h2>
 
   <div class="gallery">
-    <img src="images/teams.jpg" alt="Team training">
-    <img src="images/team1.jpg" alt="Team photo">
-    <img src="images/team2.jpg" alt="Training session">
-    <img src="images/team3.jpg" alt="Match day">
-    <img src="images/team4.jpg" alt="Team celebration">
-    <img src="images/team5.jpg" alt="Practice time">
-    <img src="images/Love.jpg" alt="Team love">
-    <img src="images/parentwithchild.jpg" alt="Parent and child">
-    <img src="images/coaches.jpg" alt="Our coaches">
-    <img src="images/teamawards.jpg" alt="Awards ceremony">
-    <img src="images/icecream.jpg" alt="Team bonding">
-    <img src="images/fullteam.jpg" alt="Full team">
+    <img src="images/teams.jpg" alt="Team">
+    <img src="images/team1.jpg" alt="Team">
+    <img src="images/team2.jpg" alt="Team">
+    <img src="images/team3.jpg" alt="Team">
+    <img src="images/team4.jpg" alt="Team">
+    <img src="images/team5.jpg" alt="Team">
+    <img src="images/Love.jpg" alt="Love">
+    <img src="images/parentwithchild.jpg" alt="Parent and Child">
+    <img src="images/coaches.jpg" alt="Coaches">
+    <img src="images/teamawards.jpg" alt="Awards">
+    <img src="images/icecream.jpg" alt="Ice Cream">
+    <img src="images/fullteam.jpg" alt="Full Team">
   </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
 
 
 
@@ -148,3 +179,4 @@
 </body>
 
 </html>
+
