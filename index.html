@@ -16,13 +16,18 @@
 <body>
 
 <!-- ===== NAVIGATION ===== -->
-<nav>
-  <ul class="nav-menu">
-    <li><a href="index.html">Home</a></li>
+ <nav>
+  <div class="logo">Kings of Centurion</div>
 
-    <li class="dropdown">
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-list">
       <a href="#">Program ▾</a>
-      <ul class="dropdown-menu">
         <li><a href="about.html">About the Program</a></li>
         <li><a href="fees.html">Fees</a></li>
         <li><a href="files/registration-form.pdf" target="_blank">Register</a></li>
@@ -33,6 +38,16 @@
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
+  <script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navList = document.querySelector('.nav-list');
+
+  mobileMenu.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    navList.classList.toggle('active');
+  });
+</script>
+
 
 <!-- ===== HERO SECTION ===== -->
 <header class="hero-header">
@@ -149,36 +164,11 @@
 
 <!-- ===== WHATSAPP BUTTON ===== -->
 <a href="https://wa.me/27649046623" class="whatsapp" target="_blank">💬</a>
-  <nav>
-  <div class="logo">Kings of Centurion</div>
-
-  <div class="menu-toggle" id="mobile-menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-
-  <ul class="nav-list">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Programs</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</nav>
-<script>
-  const mobileMenu = document.getElementById('mobile-menu');
-  const navList = document.querySelector('.nav-list');
-
-  mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navList.classList.toggle('active');
-  });
-</script>
-
+  
 
 </body>
 </html>
+
 
 
 
